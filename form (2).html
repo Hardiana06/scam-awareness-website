@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: rgb(144,12,12);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(144,12,12);
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Enquiry Form</h2>
+    <form id="enquiryForm" action="#" method="post" onsubmit="return submitForm()">
+        <div class="form-group">
+            <label for="salutation">Salutation:</label>
+            <select id="salutation" name="salutation" required>
+                <option value="">Select</option>
+                <option value="Mr">Mr</option>
+                <option value="Ms">Ms</option>
+                <option value="Mdm">Mdm</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Please type e-mail in correct form" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+65 **** ****" required>
+        </div>
+        <div class="form-group">
+            <label for="questions">Questions:</label>
+            <textarea id="questions" name="questions" placeholder="Type your questions here" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="preferred">Preferred Method of Response:</label>
+            <select id="preferred" name="preferred" required>
+                <option value="">Select</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div id="successMessage" class="success-message">
+        <p>Thank you for your submission! We will get back to you shortly.</p>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        var salutation = document.getElementById('salutation').value;
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var questions = document.getElementById('questions').value;
+        var preferred = document.getElementById('preferred').value;
+
+        if (salutation === "" || name === "" || email === "" || phone === "" || questions === "" || preferred === "") {
+            alert("Please fill out all required fields.");
+            return false;
+        }
+
+        var message = "";
+        if (preferred === "email") {
+            message = "We will respond to your enquiry via email.";
+        } else if (preferred === "sms") {
+            message = "We will respond to your enquiry via SMS.";
+        }
+        alert(message);
+
+        document.getElementById("enquiryForm").reset();
+        document.getElementById("successMessage").style.display = "block";
+        return false; // Prevents default form submission
+    }
+</script>
+
+</body>
+</html>

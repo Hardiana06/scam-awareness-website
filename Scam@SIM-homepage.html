@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trial</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('scamm.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 100%;
+            background-color: transparent;
+        }
+        .header {
+            display: flex;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 230px;
+            height: 125px;
+        }
+        .nav {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+        }
+        .nav a {
+            color: rgb(144, 12, 12);
+            text-decoration: none;
+            padding: 20px 30px;
+            background-color: ghostwhite;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+        .nav a:hover {
+            background-color: #888;
+        }  
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: rgb(212, 48, 48);
+        }
+
+        .nav ul li a:hover {
+            background-color: #888;
+        }
+
+        .nav ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ccc;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .nav ul li ul.dropdown li {
+            display: block;
+        }
+
+        .nav ul li ul.dropdown li a {
+            padding: 12px 16px;
+            color: rgb(212, 48, 48);
+        }
+
+        .nav ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+        .footer .footer-section h3 {
+            margin-top: 0;
+        }
+        .footer .footer-section p,
+        .footer .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer .footer-section a:hover {
+            color: white;
+        }
+        .footer .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .footer-section ul li {
+            margin: 5px 0;
+        }
+        .footer .footer-section .social a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #ccc;
+        }
+        .footer .footer-section .social a:hover {
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+            }
+        }
+        .sidebar {
+            width: 230px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .sidebar p {
+            margin: 0 0 10px;
+        }
+        .sidebar a {
+            color: #007BFF;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #f1f1f1;
+            color: #0056b3;
+        }
+        
+        .footer .footer-section .social-media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer .footer-section .social-media-container a {
+            display: block;
+            margin: 5px 0;
+        }
+        .font {
+            font-family: 'Arial Black', Gadget, sans-serif; /* Use Arial Black for better visibility */
+            font-weight: 300;
+            color: rgb(0, 0, 0); 
+            font-size: 15px;
+        }
+        .scam {
+            color: #5a0909;
+            font-family: serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: calc(50% - 20px); /* To ensure it wraps around the text */
+            z-index: 1; /* Ensure it's above the content */
+        }
+        h1 {
+            text-align: left;
+            font-size: 48px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="scams-logo.png" class="logo" alt="logo">
+        <div class="nav">
+            <ul>
+                <li><a href="Home">Home</a></li>
+                <li><a href="Types of scams.html">Types Of Scams</a>
+                    <ul class="dropdown">
+                        <li><a href="E-commerce.html">E-commerce</a></li>
+                        <li><a href="#Extortion">Extortion</a></li>
+                        <li><a href="#Loan">Loan</a></li>
+                    </ul>
+                </li>
+                <li><a href="community-thoughts.html">Community thoughts</a></li>
+                <li><a href="form (2).html" target="_blank">Enquiry form</a></li>
+            </ul>
+       
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>E-Commerce Scams</h2> 
+            <p><a href="https://www.straitstimes.com/singapore/2000-victims-lost-1m-to-concert-ticket-scams-in-5-months">2,000 victims lost $1m to concert ticket scams in 5 months</a></p> 
+            <p><a href="https://www.straitstimes.com/singapore/health/sgh-warns-public-of-fake-advertisements-using-its-logo-to-promote-health-products">SGH warns public of fake advertisements using its logo to promote health products</a></p>
+            <p><a href="https://www.straitstimes.com/singapore/courts-crime/scam-victims-lost-413-million-in-first-quarter-of-2020-e-commerce-and-loan">Scam victims lost $41.3 million in Q1; e-commerce and loan scams among most common</a></p> 
+            <h2>Extortion</h2> 
+            <p><a href="https://www.straitstimes.com/singapore/courts-crime/cyber-extortion-cases-up-by-47-per-cent-in-first-half-of-the-year-as-online-activity-picks-up">Cyber extortion cases up by 47 per cent in first half of the year as online activity picks up</a></p>        
+            <p><a href="https://www.channelnewsasia.com/singapore/extortion-letters-fake-obscene-photos-police-investigate-12-people-4306686">12 people investigated for suspected involvement in extortion letters with fake obscene photos</a></p>
+            <p><a href="https://www.channelnewsasia.com/singapore/mps-extortion-letters-fake-photos-vivian-balakrishnan-tan-wu-meng-edward-chia-police-4279921">Vivian Balakrishnan, Tan Wu Meng among MPs who received extortion letters with fake obscene photos</a></p> 
+            <h2>Loan Scams</h2> 
+            <p><a href="https://www.straitstimes.com/singapore/courts-crime/168-million-lost-to-scammers-in-first-half-of-2021-overall-crime-up-by-112">$168m lost to top 10 scam types in first half of 2021; overall crime up by 11.2%</a></p>        
+            <p><a href="https://www.channelnewsasia.com/singapore/new-loan-scam-android-malware-app-police-advisory-3700496">Police warn of new loan scam variant involving malicious Android app</a></p> 
+            <p><a href="https://www.straitstimes.com/singapore/scam-asking-borrowers-to-make-payment-before-getting-loans-cost-victims-200000">New scam in S'pore asking borrowers to make payment before getting loans cost victims $200,000</a></p>
+        </div>
+        <div class="content">
+            <h1>Homepage</h1>
+            <p class="font">Scams are fraudulent schemes designed to deceive people and their personal information. <br>
+                Common types of scams include phishing emails, fake online stores, and lottery frauds.<br>
+                 To identify a scam, look for warning signs such as unsolicited messages, 
+                requests for personal<br> information or payment, and poor grammar or spelling.     Verify the legitimacy of the source by <br>checking official websites or contacting the company directly, and always be cautious when<br> sharing personal details online. When serving the Web, Web users should be vigilent and look out<br> for <em>'Too good to be true'</em> deals as it will probably be a <span class="scam">SCAM</span>. </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br>
+                <br><br><br><br><br><br>
+                <div style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9;">
+                    <p style="font-weight: bold; text-align: center; font-size: 25px; font-family: 'display';">3 Simple Ways To Prevent Falling For Scams</p>
+                
+                    <p>Follow this <span style="font-weight: bold; color: rgb(144,12,12); font-size: 20px;">ACT</span> </p>
+                
+                    <ol>
+                        <li><span style="font-weight: bold; color: rgb(144,12,12); font-size: 20px;">A</span>dd security features and set up transaction limits for internet banking transactions, enable Two-Factor Authentication (2FA), Multifactor Authentication for bank accounts. Consider Money Lock option for your bank accounts.</li>
+                        <li><span style="font-weight: bold; color: rgb(144,12,12); font-size: 20px;">C</span>heck for any spelling errors in the webpage link for tell-tale signs of a phishing website. Call the NCPC Anti-Scam Helpline at 1800-722-6688 if you are unsure if a situation you are facing is a scam. Be cautious of attractive deals that seem too good to be true.</li>
+                        <li><span style="font-weight: bold; color: rgb(144,12,12); font-size: 20px;">T</span>ell the authorities by filing a police report and contact your bank immediately if you suspect that your account or credit card has been compromised.</li>
+                    </ol>
+                </div>
+            <img src="lol.png" alt="Beware of hot deals" width="200px" style="position: absolute; top: 10px; right: -8px;">
+            <img src="lul.png" alt="SMS Scam" width="200px" style="position: absolute; top: 300px; right: -8px;">
+            <img src="lil.png" alt="Online Shopping Scam" width="200px" style="position: absolute; top: 587px; right: -8px;">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are students from SIM Global Education Information Technology Foundation Studies (ITFS) programme builiding a website to raise awareness on different types of scams. Our names are Aung Khaing Maw, Suhail Mohamed Sharbudeen, Liyana Arachige Nathasha Gunatilake, Nijam Mohideen Hardiana, Marveen s/o Segar</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>461 Clementi Road, Singapore</p>
+            <p>Email: study@sim.edu.sg</p>
+            <p>Phone: +65 6248 9746</p>
+        </div>
+        <div class="footer-section">
+            <h3>Social Media</h3>
+            <div class="social-media-container">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="ig.png" alt="Instagram" style="width: 40px; background-color: transparent">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="fb.png" alt="Facebook" style="width: 40px; background-color: transparent;">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="x.png" alt="Twitter" style="width: 40px;">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="youtube.png" alt="YouTube" style="width: 40px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

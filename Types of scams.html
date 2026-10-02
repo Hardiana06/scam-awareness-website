@@ -1,0 +1,279 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scams@SIM</title>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    .header {
+    display: flex;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .logo {
+    width: 230px;
+    height: 125px;
+    }
+    .nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    }
+    .nav a {
+    color: rgb(144, 12, 12);
+    text-decoration: none;
+    padding: 20px 30px;
+    background-color: ghostwhite;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    }
+    .nav a:hover {
+    background-color: #888;
+    }  
+    .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    }                    
+    .nav ul li {
+    display: inline-block;
+    position: relative;
+    }
+    .nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: rgb(212, 48, 48);
+    }
+                            
+    .nav ul li a:hover {
+        background-color: #888;
+    }
+
+    .nav ul li ul.dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ccc;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .nav ul li ul.dropdown li {
+        display: block;
+    }
+
+    .nav ul li ul.dropdown li a {
+        padding: 12px 16px;
+        color: rgb(212, 48, 48);
+    }
+
+    .nav ul li:hover ul.dropdown {
+        display: block;
+    }
+
+    .main {
+        display: flex;
+        flex: 1;
+    }
+    .sidebar {
+        width: 213px;  /* Same width as logo */
+        background-color: #f4f4f4;
+        padding: 15px;
+        position: relative;
+        overflow-y: auto;
+    }
+    .content {
+        flex: 1;
+        padding: 20px;
+        font-size: 15px;
+            font-family:'Arial Black', Gadget, sans-serif; 
+           font-weight: 300;
+           color: rgb(0, 0, 0); 
+    }
+    .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+        .footer .footer-section h3 {
+            margin-top: 0;
+        }
+        .footer .footer-section p,
+        .footer .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer .footer-section a:hover {
+            color: white;
+        }
+        .footer .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .footer-section ul li {
+            margin: 5px 0;
+        }
+        .footer .footer-section .social a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #ccc;
+        }
+        .footer .footer-section .social a:hover {
+            color: white;
+        }
+   
+    @media (max-width: 600px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer {
+                flex-direction: column;
+                align-items: center;
+            }}
+        
+        .sidebar {
+            width: 230px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h2 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .sidebar p {
+            margin: 0 0 10px;
+        }
+        .sidebar a {
+            color: #007BFF;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #f1f1f1;
+            color: #0056b3;
+        }
+        .footer .footer-section .social-media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer .footer-section .social-media-container a {
+            display: block;
+            margin: 5px 0;
+        }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <img src="scams-logo.png" class="logo" alt="logo">
+                <div class="nav">
+                    <ul>
+                        <li><a href="Scam@SIM-homepage.html">Home</a></li>
+                        <li><a href="Types of scams.html">Types Of Scams</a>
+                            <ul class="dropdown">
+                                <li><a href="E-commerce.html">E-commerce</a></li>
+                                <li><a href="Extortion.html">Extortion</a></li>
+                                <li><a href="loan.html">Loan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="community-thoughts.html">Community thoughts</a></li>
+                        <li><a href="form (2).html" target="_blank">Enquiry form</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="sidebar">
+                    <h2>E-Commerce Scams</h2> 
+                    <p><a href="https://www.straitstimes.com/singapore/2000-victims-lost-1m-to-concert-ticket-scams-in-5-months">2,000 victims lost $1m to concert ticket scams in 5 months</a></p> 
+                    <p><a href="https://www.straitstimes.com/singapore/health/sgh-warns-public-of-fake-advertisements-using-its-logo-to-promote-health-products">SGH warns public of fake advertisements using its logo to promote health products</a></p>
+                    <p><a href="https://www.straitstimes.com/singapore/courts-crime/scam-victims-lost-413-million-in-first-quarter-of-2020-e-commerce-and-loan">Scam victims lost $41.3 million in Q1; e-commerce and loan scams among most common</a></p> 
+                    <h2>Extortion</h2> 
+                    <p><a href="https://www.straitstimes.com/singapore/courts-crime/cyber-extortion-cases-up-by-47-per-cent-in-first-half-of-the-year-as-online-activity-picks-up">Cyber extortion cases up by 47 per cent in first half of the year as online activity picks up</a></p>        
+                    <p><a href="https://www.channelnewsasia.com/singapore/extortion-letters-fake-obscene-photos-police-investigate-12-people-4306686">12 people investigated for suspected involvement in extortion letters with fake obscene photos</a></p>
+        <p><a href="https://www.channelnewsasia.com/singapore/mps-extortion-letters-fake-photos-vivian-balakrishnan-tan-wu-meng-edward-chia-police-4279921">Vivian Balakrishnan, Tan Wu Meng among MPs who received extortion letters with fake obscene photos</a></p> 
+                    <h2>Loan Scams</h2> 
+                    <p><a href="https://www.straitstimes.com/singapore/courts-crime/168-million-lost-to-scammers-in-first-half-of-2021-overall-crime-up-by-112">$168m lost to top 10 scam types in first half of 2021; overall crime up by 11.2%</a></p>        
+                    <p><a href="https://www.channelnewsasia.com/singapore/new-loan-scam-android-malware-app-police-advisory-3700496">Police warn of new loan scam variant involving malicious Android app</a></p> 
+                    <p><a href="https://www.straitstimes.com/singapore/scam-asking-borrowers-to-make-payment-before-getting-loans-cost-victims-200000">New scam in S'pore asking borrowers to make payment before getting loans cost victims $200,000</a></p>
+                </div>
+            <div class="content">
+                <h2><u>Types of Scams</u></h2>
+                <h3><em>E-commerce</em></h3>
+                <p>Typically, these scams involve the sales of goods and services without a meet-up. The victims would encounter enticing deals online, and fail to receive goods or services after paying. At times, victims may be asked to download apps to make payment for products, reserve a service, or facilitate a refund.</p>
+                <p><a href="E-commerce.html">Click here to to find out more</a></p>
+                <br>
+                <h3><em>Extortion</em></h3>
+                <p>The illegal use of force, threats of force, or intimidation to obtain money or property from a person or organization is known as extortion. A threat against the victim's person or property, as well as their family or friends, is typically involved in extortion.</p>
+                <p><a href="Extortion.html">Click here to to find out more</a></p>
+                <br>
+                <h3><em>Loan</em></h3>
+                <p>Scammers pose as authorized moneylenders and provide lending services to unidentified individuals, frequently via WhatsApp or SMS communications. Before the loan may be disbursed, interested parties are required to transfer money as a maintenance charge. The victims discover that the con artists are no longer reachable after completing the transfer.</p>
+                <p><a href="loan.html">Click here to to find out more</a></p>
+                <br>
+            </div>
+            </div>
+        <div class="footer">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are students from SIM Global Education Information Technology Foundation Studies (ITFS) programme builiding a website to raise awareness on different types of scams. <br>
+                    <br>Our names are: 
+                    <br>Aung Khaing Maw (10262447)
+                    <br>Nijam Mohideen Hardiana (10260712)
+                    <br>Suhail Mohamed Sharbudeen (10261011)
+                    <br>Liyana Arachige Nathasha Gunatilake (10261262)
+                    <br>Marveen s/o Segar (10261180)
+                </p>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>461 Clementi Road, Singapore</p>
+                <p>Email: study@sim.edu.sg</p>
+                <p>Phone: +65 6248 9746</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <div class="social-media-container">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="ig.png" alt="Instagram" style="width: 40px; background-color: transparent">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="fb.png" alt="Facebook" style="width: 40px; background-color: transparent;">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="x.png" alt="Twitter" style="width: 40px;">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="youtube.png" alt="YouTube" style="width: 40px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>
